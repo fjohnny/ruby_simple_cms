@@ -59,7 +59,40 @@
 - params are always **strings**
 
 
-### Databases 
+### Models and Databases 
+
+#### Generate Migration
+
+``` rails generate migration MigrationName ```
+
+- ```up``` method makes a change to a database and ```down``` reverses that change
+
+#### Generate Model
+
+``` rails generate model User ```    (for model name use singular and camel-case)
+
+#### Table Column Types & Options
+
+
+| Table Column Types | Table Column Options |
+---------------------|----------------------|
+|binary | :limit ==> size |
+|boolean | :default ==> value |
+|date | :null ==> true/false |
+|datetime |  |
+|decimal | :precision => number |
+|float | :scale => number |
+|integer |  |
+|string | | 
+|text | |
+| time | |
+
+- Columns ```t.datetime "created_at"``` and ```t.datetime "updated_at"``` are automatically handeled and updated by rails  - Short notation is ```t.timestamps```
+- id column gets created automatically
+
+#### Run Migration
+
+```rails db:migrate```
 
 ---
 ---
