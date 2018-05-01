@@ -1,6 +1,6 @@
 class DemoController < ApplicationController
   
-  layout false
+  layout 'admin'
 
   def index
     render('index')
@@ -26,5 +26,9 @@ class DemoController < ApplicationController
   def gf
     redirect_to('https://gamefreaks.com.au');
   end;
+
+  def escape_output
+  
+  end
 
 end
