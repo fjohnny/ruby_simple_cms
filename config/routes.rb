@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-   
   #root route
   root 'demo#index'
 
@@ -11,6 +10,17 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+  resources :sections do
+    member do
+      get :delete
+    end
+  end
 
   #simple route 
   get 'demo/index' 
