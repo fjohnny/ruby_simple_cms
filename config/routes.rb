@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   
-  
-  get 'example/action1'
-  get 'example/action2'
+   
   #root route
   root 'demo#index'
+
+  #Resourceful Routes
+  resources :subjects do
+    member do
+      get :delete
+    end
+  end
+
 
   #simple route 
   get 'demo/index' 
